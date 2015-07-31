@@ -1,0 +1,28 @@
+<div class="page-header">
+  <h1>Products&nbsp;&nbsp;<small>Find your HG...</small></h1>
+</div>
+
+<div class="container">
+	<h4>Add new</h4>
+	<div class="input-group">
+	<%= form_for @product, url: new_product_path(@product) do |f| %>
+  <ul>
+  <% @product.errors.full_messages.each do |error| %>
+    <li><%= error %></li>
+  <% end %>
+  </ul>
+  <p>
+    <%= f.text_field :brand, :placeholder => "Brand Name", :class => "form-control" %>
+  </p>
+  <p>
+    <%= f.text_field :name, :placeholder => "Product Name", :class => "form-control" %>
+  </p>
+  <p>
+    <%= f.text_field :image, :placeholder => "Image URL", :class => "form-control" %>
+  </p>
+  <p>
+    <%= f.submit "Submit", :class => "btn btn-default" %>
+  </p>
+<% end %>
+</div>
+</div>
