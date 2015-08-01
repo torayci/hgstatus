@@ -1,0 +1,24 @@
+<div class="input-group">
+	<%= form_for @product do |f| %>
+  <ul>
+  <% @product.errors.full_messages.each do |error| %>
+    <li><%= error %></li>
+  <% end %>
+  </ul>
+  <p>
+    <%= f.text_field :brand, :placeholder => "Brand Name", :class => "form-control" %>
+  </p>
+  <p>
+    <%= f.text_field :name, :placeholder => "Product Name", :class => "form-control" %>
+  </p>
+  <p>
+    <%= f.text_field :image, :placeholder => "Image URL", :class => "form-control" %>
+  </p>
+  <p>
+    <%= f.text_area :ingredient_list, :placeholder => "Ingredients", :class => "form-control" %>
+  </p>
+  <p>
+    <%= f.submit "Submit", :class => "btn btn-default" %>
+  </p>
+<% end %>
+</div>

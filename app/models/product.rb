@@ -1,6 +1,7 @@
 class Product < ActiveRecord::Base
 	has_many :formulas
 	has_many :ingredients, through: :formulas
+	has_many :reviews
 
 	def ingredient_list=(ingredients_string)
 		ingredient_names = ingredients_string.split(",").collect{|s| s.strip.downcase}.uniq

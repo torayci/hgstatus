@@ -4,7 +4,9 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
-  resources :products
+  resources :products do
+    resources :reviews
+  end
 
   resources :ingredients
   # Example of regular route:

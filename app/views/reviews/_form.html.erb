@@ -1,0 +1,13 @@
+<h3>Post a Review</h3>
+
+<%= form_for [ @product, @review ] do |f| %>
+	<p>
+		<%= f.text_field :reviewer_name, :placeholder => "Name", :class => "form-control"%>
+	</p>
+	<p>
+		<%= f.text_area :body, :placeholder => "Body", :class => "form-control" %>
+	</p>
+	<p>
+		<%= f.submit 'Submit', :class => "btn btn-default" %>
+	</p>
+<%end%>
