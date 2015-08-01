@@ -1,4 +1,4 @@
-class ProductController < ApplicationController
+class ProductsController < ApplicationController
 	include ProductHelper
 	def index
 		@products = Product.all
@@ -12,7 +12,7 @@ class ProductController < ApplicationController
 		@product = Product.new(product_params)
 		@product.save
 
-		redirect_to product_path(@product)
+		redirect_to products_path(@product)
 	end
 
 	def show
@@ -23,6 +23,6 @@ class ProductController < ApplicationController
 		@product = Product.find(params[:id])
 		@product.destroy
 
-		redirect_to product_index_path
+		redirect_to products_path
 	end
 end

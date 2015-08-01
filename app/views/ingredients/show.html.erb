@@ -1,0 +1,23 @@
+<div class="page-header">
+  <h1>Products &nbsp;&nbsp;<small><%=@ingredient%></small></h1>
+</div>
+
+<% @ingredient.products.each do |product| %>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-4">
+				<div class="thumbnail">
+					<%= image_tag product.image%>
+				</div>
+			</div>
+				<div class="col-sm-8">
+				<p><strong><%=product.brand%></strong></p>
+					<p><%=product.name%></p>
+					<br>
+					<br>
+					<p>
+					<%=link_to "Details", product_path(product), class:"btn btn-default", style:"float: right;"%>
+				</div>
+			</div>
+		</div>
+	<%end%>

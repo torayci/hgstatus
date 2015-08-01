@@ -5,7 +5,7 @@
 <div class="container">
 	<h4>Add new</h4>
 	<div class="input-group">
-	<%= form_for @product, url: new_product_path(@product) do |f| %>
+	<%= form_for @product do |f| %>
   <ul>
   <% @product.errors.full_messages.each do |error| %>
     <li><%= error %></li>
@@ -19,6 +19,9 @@
   </p>
   <p>
     <%= f.text_field :image, :placeholder => "Image URL", :class => "form-control" %>
+  </p>
+  <p>
+    <%= f.text_area :ingredient_list, :placeholder => "Ingredients", :class => "form-control" %>
   </p>
   <p>
     <%= f.submit "Submit", :class => "btn btn-default" %>
