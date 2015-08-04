@@ -10,14 +10,34 @@
 	border: 1px solid #EEEEEE;
 }
 
-body { 
-	padding-top: 70px; 
+html {
+  position: relative;
+  min-height: 100%;
 }
 
-.container {
+body { 
+	padding-top: 70px;
+	margin-bottom: 60px; 
+}
+
+.product-container {
 	border: 1px solid #EEEEEE;
-	padding-top: 20px;
-	margin: 10px;
+	margin: auto;
+	margin-bottom: 10px;
+	width: auto;
+	max-width: 680px;
+	padding: 0px 15px;
+    padding-top: 20px;
+    padding-right: 15px;
+    padding-bottom: 0px;
+    padding-left: 15px;
+}
+
+.container-footer-margin {
+	margin: auto;
+	margin-bottom: 70px;
+	width: auto;
+	max-width: 680px;
 }
 
 .input-group {
@@ -41,4 +61,13 @@ body {
 
 .btn-default {
 	margin: 10px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #f5f5f5;
 }

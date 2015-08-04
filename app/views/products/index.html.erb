@@ -2,7 +2,7 @@
   <h1>Products&nbsp;&nbsp;<small>Find your HG...</small></h1>
 </div>
 
-<div class="container" style="border: 0px; padding-bottom: 10px;">
+<div class="product-container" style="border: 0px; padding-bottom: 10px;">
 	<div class="row">
 		<div class="col-sm-4">
 	<%= link_to "Add New", new_product_path, class:"btn btn-default" %>
@@ -10,8 +10,9 @@
 	</div>
 </div>
 
+<div class="container-footer-margin">
 	<% @products.each do |product| %>
-	<div class="container">
+	<div class="product-container">
 		<div class="row">
 			<div class="col-sm-4">
 				<div class="thumbnail">
@@ -24,8 +25,9 @@
 					<br>
 					<br>
 					<p>
-					<%=link_to "Details", product_path(product), class:"btn btn-default", style:"float: right;"%>
+					<%=link_to "Details", product_path(product), class:"btn btn-default", style:"float: right;"%></p>
 				</div>
 			</div>
 		</div>
 	<%end%>
+</div>
