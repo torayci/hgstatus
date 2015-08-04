@@ -1,4 +1,7 @@
 class ProductsController < ApplicationController
+	before_filter :require_login, only: [:new, :create, :edit, :update, :destroy]
+
+
 	include ProductHelper
 	def index
 		@products = Product.all

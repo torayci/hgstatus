@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<div class="container-footer-margin">
+<h1>Thank you!</h1>
+  <div class="product-container">
+
+<p>
+  <strong>Username:</strong>
+  <%= @user.username %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
+</div>
+<%= link_to 'Back', users_path, :class => "btn btn-default"  %>
+<%= link_to 'Edit', edit_user_path(@user), :class => "btn btn-default"  %> 
+</div>

@@ -2,6 +2,7 @@
   <h1>Products&nbsp;&nbsp;<small>Find your HG...</small></h1>
 </div>
 
+<% if logged_in? %>
 <div class="product-container" style="border: 0px; padding-bottom: 10px;">
 	<div class="row">
 		<div class="col-sm-4">
@@ -9,6 +10,7 @@
 		</div>
 	</div>
 </div>
+<%end%>
 
 <div class="container-footer-margin">
 	<% @products.each do |product| %>

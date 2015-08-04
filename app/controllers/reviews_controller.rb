@@ -1,4 +1,5 @@
 class ReviewsController < ApplicationController
+	before_filter :require_login
 	include ReviewsHelper
 	def create
 	  @review = Review.new(review_params)
