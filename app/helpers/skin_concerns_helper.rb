@@ -1,0 +1,2 @@
+module SkinConcernsHelper
+end

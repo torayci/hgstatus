@@ -1,0 +1,15 @@
+<div class="input-group">
+	<%= form_for @user do |f| %>
+  <ul>
+  <% @user.errors.full_messages.each do |error| %>
+    <li><%= error %></li>
+  <% end %>
+  </ul>
+  <p>
+    <%= check_box_tag "Eczema"%>
+  </p>
+  <p>
+    <%= f.submit "Submit", :class => "btn btn-default" %>
+  </p>
+<% end %>
+</div>

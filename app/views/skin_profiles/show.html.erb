@@ -1,0 +1,12 @@
+<div class="page-header">
+  <h1>My Skin Profile&nbsp;<small><%= current_user.username%></small></h1>
+</div>
+
+<div class="container-footer-margin">
+<% @user_concerns.each do |concern| %>
+<p><%=concern%></p>
+<%end%>
+
+	<%= link_to "Edit", edit_skin_profile_path, class: "btn btn-default", style:"float: right; margin 10px"%>
+
+</div>
